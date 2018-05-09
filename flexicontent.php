@@ -52,3 +52,10 @@ class Flexi_Content {
 }
 
 $flexi_content = new Flexi_Content;
+
+require 'plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/SimonNewman/Flexible-Content',
+	__FILE__,
+	'flexicontent'
+);

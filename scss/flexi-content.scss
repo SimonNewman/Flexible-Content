@@ -1,0 +1,145 @@
+$grey-1: #efefef;
+
+.flexible-content-container {
+  width: 100%;
+  padding-bottom: 30px;
+  p:last-child {
+    margin-bottom: 0;
+  }
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+  .flexible-content {
+    &:not(:last-child) {
+      margin-bottom: 70px;
+    }
+  }
+
+  .one-column,
+  .two-columns,
+  .three-columns {
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+  .one-column {
+    .columns {
+      .column {
+        width: calc(100% - 45px);
+      }
+    }
+  }
+  .two-columns {
+    .columns {
+      .column {
+        width: calc(50% - 45px);
+        @media screen and (max-width: 992px) {
+          width: 100%;
+          &:not(:last-child) {
+            margin-bottom: 60px;
+          }
+        }
+      }
+    }
+  }
+  .three-columns {
+    .columns {
+      .column {
+        width: calc(33.3333% - 45px);
+        @media screen and (max-width: 992px) {
+          width: 100%;
+          &:not(:last-child) {
+            margin-bottom: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  .two-images,
+  .three-images {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .two-images {
+    .image {
+      width: calc(50% - 5px);
+    }
+  }
+
+  .three-images {
+    .image {
+      width: calc(33.3333% - 5px);
+    }
+  }
+
+  .image-and-content {
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .column {
+        flex: 1;
+        &:first-child {
+          margin-right: 90px;
+        }
+      }
+    }
+    @media screen and (max-width: 992px) {
+      .columns {
+        .column {
+          &:first-child {
+            margin-right: 40px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .columns {
+        flex-wrap: wrap;
+        .column {
+          flex: none;
+          width: 100%;
+          &:first-child {
+            margin-right: 0;
+            margin-bottom: 40px;
+          }
+        }
+      }
+      .image {
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .highlighted-section {
+    padding: 30px 40px;
+    background: $grey-1;
+    @media screen and (max-width: 576px) {
+      padding: 22px 25px;
+    }
+  }
+
+  .youtube-video {
+    max-width: 800px;
+    margin: 0 auto;
+    .wrapper {
+      position: relative;
+      padding-top: 56.25%;
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

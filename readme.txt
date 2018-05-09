@@ -4,6 +4,8 @@ Contributors: Simon Newman
 Build custom page layouts using Advanced Custom Field\'s \"Flexible Content\" field type.
 
 == Description ==
+Build custom page layouts using Advanced Custom Field\'s \"Flexible Content\" field type.
+
 Current sections include:
 
 * 1 Column

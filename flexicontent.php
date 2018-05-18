@@ -66,7 +66,7 @@ class Flexi_Content {
     if( function_exists('acf_add_options_sub_page') ) {
     	acf_add_options_sub_page(array(
         'page_title' => 'Flexible Content Settings',
-        'menu_title' => 'Flexible Content Settings',
+        'menu_title' => 'Flexible Content',
         'parent_slug' => 'options-general.php',
         'update_button'		=> __('Save Settings', 'acf'),
         'post-id' => 'flexible-content-settings-page'

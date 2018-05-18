@@ -20,6 +20,7 @@ class Flexi_Content {
 	  add_filter('the_content', array($this, 'add_flexi_content_template'));
     $this->add_image_sizes();
     $this->updater();
+    $this->add_menu();
   }
 
 	function add_flexi_content_template( $content ) {
@@ -29,9 +30,9 @@ class Flexi_Content {
 	}
 
   function add_image_sizes() {
-    $section_width = 1200;
+    $section_width = get_field('page_width', 'option');
     $column_margin = 75;
-    $image_height = 350;
+    $image_height = get_field('image_height', 'option');
 
     add_image_size('flex_large_no_crop', $section_width, '');
     add_image_size('flex_large', $section_width, $image_height * 1.5, true);
@@ -59,6 +60,18 @@ class Flexi_Content {
     	__FILE__,
     	'flexicontent'
     );
+  }
+
+  function add_menu() {
+    if( function_exists('acf_add_options_sub_page') ) {
+    	acf_add_options_sub_page(array(
+        'page_title' => 'Flexible Content Settings',
+        'menu_title' => 'Flexible Content Settings',
+        'parent_slug' => 'options-general.php',
+        'update_button'		=> __('Save Settings', 'acf'),
+        'post-id' => 'flexible-content-settings-page'
+      ));
+    }
   }
 }
 

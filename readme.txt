@@ -19,6 +19,10 @@ Current sections include:
 * YouTube Video
 
 == Changelog ==
+= 1.0.5 =
+* Added options page
+* Can now set image height and page width to generate the correct image sizes
+
 = 1.0.4 =
 * Changed vertical alignment of image/content to top
 

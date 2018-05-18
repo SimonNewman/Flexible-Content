@@ -4,7 +4,7 @@
 	Plugin Name: Flexi Content
 	Author: Formation Media
   Description: Add ACF Flexible content elements
-  Version: 1.0.4
+  Version: 1.0.5
 */
 
 defined( 'ABSPATH' ) OR exit;

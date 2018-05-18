@@ -19,6 +19,9 @@ Current sections include:
 * YouTube Video
 
 == Changelog ==
+= 1.0.3 =
+* Changed plugin class
+
 = 1.0.2 =
 * Updated readme.txt
 

@@ -4,6 +4,7 @@
 	Plugin Name: Flexi Content
 	Author: Formation Media
   Description: Add ACF Flexible content elements
+  Version: 1.0.3
 */
 
 defined( 'ABSPATH' ) OR exit;
@@ -18,6 +19,7 @@ class Flexi_Content {
     add_action('wp_enqueue_scripts', array($this, 'register_css'));
 	  add_filter('the_content', array($this, 'add_flexi_content_template'));
     $this->add_image_sizes();
+    $this->updater();
   }
 
 	function add_flexi_content_template( $content ) {
@@ -45,17 +47,19 @@ class Flexi_Content {
     }
   }
 
-  function register_css(){
+  function register_css() {
 		wp_register_style('flexi-content', plugin_dir_url( __FILE__ ) . 'flexi-content.css');
 		wp_enqueue_style('flexi-content');
 	}
+
+  function updater() {
+    require 'plugin-update-checker/plugin-update-checker.php';
+    $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+    	'https://github.com/SimonNewman/Flexible-Content',
+    	__FILE__,
+    	'flexicontent'
+    );
+  }
 }
 
 $flexi_content = new Flexi_Content;
-
-require 'plugin-update-checker/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/SimonNewman/Flexible-Content',
-	__FILE__,
-	'flexicontent'
-);

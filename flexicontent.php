@@ -30,9 +30,19 @@ class Flexi_Content {
 	}
 
   function add_image_sizes() {
-    $section_width = get_field('page_width', 'option');
+    if (get_field('page_width', 'option')) {
+      $section_width = get_field('page_width', 'option');
+    } else {
+      $section_width = 1200;
+    }
+
+    if (get_field('image_height', 'option')) {
+      $image_height = get_field('image_height', 'option');
+    } else {
+      $image_height = 350;
+    }
+    
     $column_margin = 75;
-    $image_height = get_field('image_height', 'option');
 
     add_image_size('flex_large_no_crop', $section_width, '');
     add_image_size('flex_large', $section_width, $image_height * 1.5, true);

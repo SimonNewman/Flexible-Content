@@ -99,15 +99,32 @@ $grey-1: #efefef;
       }
     }
     @media screen and (max-width: 768px) {
+      &.image-right {
+        .columns {
+          .column {
+            &:first-child {
+              margin-right: 0;
+              margin-bottom: 40px;
+            }
+          }
+        }
+      }
+      &.image-left {
+        .columns {
+          flex-direction: column-reverse;
+          .column {
+            &:last-child {
+              margin-right: 0;
+              margin-bottom: 40px;
+            }
+          }
+        }
+      }
       .columns {
         flex-wrap: wrap;
         .column {
           flex: none;
           width: 100%;
-          &:first-child {
-            margin-right: 0;
-            margin-bottom: 40px;
-          }
         }
       }
       .image {

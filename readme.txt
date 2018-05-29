@@ -20,6 +20,9 @@ Current sections include:
 
 == Changelog ==
 
+= 1.0.9 =
+* Fixed versioning issue
+
 = 1.0.8 =
 * Fixed column width of single column
 

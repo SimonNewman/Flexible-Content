@@ -26,13 +26,6 @@ $grey-1: #efefef;
       flex-wrap: wrap;
     }
   }
-  .one-column {
-    .columns {
-      .column {
-        width: calc(100% - 45px);
-      }
-    }
-  }
   .two-columns {
     .columns {
       .column {

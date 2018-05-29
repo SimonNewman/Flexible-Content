@@ -20,6 +20,9 @@ Current sections include:
 
 == Changelog ==
 
+= 1.0.8 =
+* Fixed column width of single column
+
 = 1.0.7 =
 * Fixed mobile version of image and content section
 * Added default values to section width and image height

@@ -1,10 +1,10 @@
 === Flexicontent ===
 Contributors: Simon Newman
 
-Build custom page layouts using Advanced Custom Field\'s \"Flexible Content\" field type.
+Build custom page layouts using Advanced Custom Field's "Flexible Content" field type.
 
 == Description ==
-Build custom page layouts using Advanced Custom Field\'s \"Flexible Content\" field type.
+Build custom page layouts using Advanced Custom Field's "Flexible Content" field type.
 
 Current sections include:
 

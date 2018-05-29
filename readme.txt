@@ -19,6 +19,11 @@ Current sections include:
 * YouTube Video
 
 == Changelog ==
+
+= 1.0.7 =
+* Fixed mobile version of image and content section
+* Added default values to section width and image height
+
 = 1.0.5 =
 * Added options page
 * Can now set image height and page width to generate the correct image sizes

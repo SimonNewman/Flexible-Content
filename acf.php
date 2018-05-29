@@ -777,7 +777,7 @@ acf_add_local_field_group(array(
 			array(
 				'param' => 'options_page',
 				'operator' => '==',
-				'value' => 'acf-options-flexible-content-settings',
+				'value' => 'acf-options-flexible-content',
 			),
 		),
 	),

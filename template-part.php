@@ -74,9 +74,16 @@
     <?php endif; ?>
 
     <?php if( get_row_layout() == 'image_and_content' ): ?>
-      <div class="image-and-content flexible-content">
+      <?php
+        if (get_sub_field('order') == 'image_right') {
+          $image_right = true;
+        } else {
+          $image_right = false;
+        }
+      ?>
+      <div class="image-and-content flexible-content <?=$image_right?'image-right':'image-left';?>">
         <div class="columns">
-          <?php if (get_sub_field('order') == 'image_right') { ?>
+          <?php if ($image_right) { ?>
             <div class="column content"><?= get_sub_field('content'); ?></div>
             <div class="column image"><?= wp_get_attachment_image(get_sub_field('image')['id'], 'flex_half'); ?></div>
           <?php } else { ?>

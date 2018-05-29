@@ -4,7 +4,7 @@
 	Plugin Name: Flexi Content
 	Author: Formation Media
   Description: Add ACF Flexible content elements
-  Version: 1.0.5
+  Version: 1.0.7
 */
 
 defined( 'ABSPATH' ) OR exit;
@@ -41,7 +41,7 @@ class Flexi_Content {
     } else {
       $image_height = 350;
     }
-    
+
     $column_margin = 75;
 
     add_image_size('flex_large_no_crop', $section_width, '');
